@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
 COPY ./requirements.txt ./requirements.txt
 
 # Install any dependencies specified in requirements.txt
+RUN pip install --upgrade setuptools
 RUN pip install numpy
 RUN pip install -r requirements.txt
 
