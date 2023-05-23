@@ -1,0 +1,10 @@
+streamlit
+streamlit-extras
+pandas
+scikit-learn
+scipy
+plotly
+openpyxl
+glmnet
+lightgbm
+xgboost
