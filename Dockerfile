@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     git \
     r-base \
     && rm -rf /var/lib/apt/lists/*
+RUN pip install --upgrade pip
 
 # Clone your code that lives in a remote repo to WORKDIR
 # RUN git clone https://github.com/streamlit/streamlit-example.git .
@@ -26,6 +27,7 @@ RUN apt-get update && apt-get install -y \
 COPY ./requirements.txt ./requirements.txt
 
 # Install any dependencies specified in requirements.txt
+RUN apt-get install python3-dev
 RUN pip install --upgrade setuptools
 RUN pip install numpy
 RUN pip install -r requirements.txt
