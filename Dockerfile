@@ -24,12 +24,9 @@ RUN pip install --upgrade pip
 # Clone your code that lives in a remote repo to WORKDIR
 # RUN git clone https://github.com/streamlit/streamlit-example.git .
 
-COPY ./requirements.txt ./requirements.txt
-
 # Install any dependencies specified in requirements.txt
-RUN apt-get install python3-dev
-RUN pip install --upgrade setuptools
 RUN pip install numpy
+COPY ./requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
 # vagy helyette ha If your code lives in the same directory as the Dockerfile, copy all your app files from your server into the container
