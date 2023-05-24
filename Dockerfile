@@ -28,6 +28,8 @@ RUN pip install --upgrade pip
 RUN pip install numpy
 COPY ./requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
+RUN pip install glmnet
+RUN conda install -c conda-forge glmnet
 
 # vagy helyette ha If your code lives in the same directory as the Dockerfile, copy all your app files from your server into the container
 COPY . .
